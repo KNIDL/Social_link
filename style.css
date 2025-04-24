@@ -1,0 +1,117 @@
+/* تخصيص الخط */
+body {
+  font-family: 'Almarai', sans-serif;
+  background: linear-gradient(to bottom, #222, #444);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* تنسيق الـ container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* قائمة الروابط */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* تنسيق الرابط */
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-radius: 50px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* تأثير على الأيقونات */
+.link i {
+  margin-right: 15px;
+  font-size: 2.5em;
+  transition: transform 0.3s ease;
+}
+
+/* ألوان لكل رابط */
+.youtube {
+  background-color: #ff0000;
+}
+
+.tiktok {
+  background-color: #010101;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+/* تأثيرات عند المرور */
+.link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+.link:hover i {
+  transform: rotate(180deg);
+}
+
+/* إضافة انميشن لطيف عند المرور */
+.link:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1.5s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
